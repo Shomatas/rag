@@ -1,0 +1,46 @@
+.contact
+
+  &__interact
+    position: relative
+    display: grid
+    grid-template-columns: 1fr 1fr
+
+  &__info
+    position: absolute
+    height: 100%
+    width: 50%
+    right: min(-120px, calc((1320px - 100vw) / 2))
+
+  &__intro
+    width: 50%
+
+  &__form
+    display: grid
+    grid-template-areas: "Name Mail" "Text Text" "Send Send"
+    gap: 30px
+
+    input, textarea
+      min-width: auto
+      width: auto
+      background: var(--rag-white)
+
+    textarea
+      width: inherit
+      resize: none
+      max-width: none
+
+    input[name="name"]
+      grid-area: Name
+
+    input[name="mail"]
+      grid-area: Mail
+
+    textarea[name="text"]
+      grid-area: Text
+
+    .contact__submit
+      grid-area: Send
+      text-align: center
+
+  &__info
+    background: var(--rag-black)

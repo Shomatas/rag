@@ -1,0 +1,17 @@
+section.products
+  .container.products__container
+    .intro.products__intro.intro_underline
+      h2.title.products__title feature products
+      p.description.products__description.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod 
+        tempor incididunt ut labore et
+    .slider.products__slider
+      .slider-controls.products__controls
+        ul.ul.products__ul
+          each product in products_controls
+            li #{product}
+      .swiper-wrapper
+        .swiper-slide
+          .products-content
+            each product in products_img
+              img(src="static/img/" + product + ".jpg")

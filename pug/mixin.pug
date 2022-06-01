@@ -1,0 +1,12 @@
+mixin links(list, cl)
+  ul(class=cl)
+    each link in list
+      a(href="#" + link)
+        li #{link}
+
+mixin card(ico, title, description)
+  .card.cards__card
+    img.icon(src=ico)
+    span.title.cards__card-title #{title}
+    span.description.cards__card-description #{description}
+    

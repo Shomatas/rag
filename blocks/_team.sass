@@ -1,0 +1,37 @@
+.team
+
+  &__intro
+    max-width: 600px
+
+  &__slider
+    display: grid
+    grid-template-columns: 3fr 8fr
+    gap: calc(100% / 12)
+
+    .swiper-slide
+      width: 320px
+      height: 450px
+
+  &__controls
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+
+  &__bullets
+    ul
+      display: flex
+      justify-content: space-between
+
+    li
+      width: 200px
+      height: 200px
+
+  &-position
+
+    &__ul
+      display: flex
+      width: 50%
+      justify-content: space-between
+      font-style: italic
+      font-weight: var(--semibold)
+      font-size: 14pt

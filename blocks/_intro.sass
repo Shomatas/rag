@@ -1,0 +1,24 @@
+.intro
+
+  margin-bottom: 100px
+
+  &_underline
+
+    position: relative
+
+    &::after
+      display: block
+      content: ''
+      width: 130px
+      height: 2px
+      background: var(--rag-red)
+      position: absolute
+      bottom: -50px
+      left: 50%
+      margin-left: -65px
+
+    &-left
+
+      &::after
+        left: 0
+        margin-left: 0

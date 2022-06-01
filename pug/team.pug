@@ -1,0 +1,33 @@
+section.team
+  .container.team__container
+    .intro.team__intro.intro_underline.intro_underline-left
+      h2.title.team__title Meet our team
+      p.description.team__description.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod 
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim 
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+    .slider.team__slider
+      .swiper-wrapper
+        .swiper-slide
+          img(src="static/img/2.jpg")
+      
+      .slider-controls.team__controls
+          .team__controls-intro
+            h3.title.controls__title Mark Waugh
+            p.description.controls__description.
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod 
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim 
+              veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ul.ul.team-position__ul
+              each position in positions
+                li #{position}
+          .team__bullets
+            ul
+              li
+                img(src="static/img/2.jpg")
+              li
+                img(src="static/img/2.jpg")
+              li
+                img(src="static/img/2.jpg")
+              li
+                img(src="static/img/2.jpg")

@@ -1,0 +1,404 @@
+:root {
+  --rag-red: #ff3f40;
+  --rag-gray: #605f5f;
+  --rag-black: #333;
+  --rag-white: #e5e5e5;
+  --hero-background: #f6f2f2;
+  --h1-fsize: 60pt;
+  --h2-fsize: 42pt;
+  --h3-fsize: 30pt;
+  --p-fsize: 16pt;
+  --extrabold: 800;
+  --semibold: 600;
+  --regular: 400;
+}
+
+@font-face {
+  font-family: "OpenSans";
+  src: url("fonts/OpenSans-Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "OpenSans";
+  src: url("fonts/OpenSans-SemiBold.ttf");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "OpenSans";
+  src: url("fonts/OpenSans-SemiBoldItalic.ttf");
+  font-weight: 600;
+  font-style: italic;
+}
+@font-face {
+  font-family: "OpenSans";
+  src: url("fonts/OpenSans-Bold.ttf");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "OpenSans";
+  src: url("fonts/OpenSans-ExtraBold.ttf");
+  font-weight: 800;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: var(--h1-fsize);
+  font-weight: 800;
+}
+
+h2 {
+  font-size: var(--h2-fsize);
+  font-weight: bold;
+}
+
+h3 {
+  font-size: var(--h3-fsize);
+  font-weight: var(--semibold);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "OpenSans";
+  overflow-x: hidden;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.nav li {
+  padding: 40px;
+}
+
+.title {
+  text-transform: uppercase;
+}
+.title_white {
+  color: white;
+}
+
+.description {
+  font-size: var(--p-fsize);
+}
+.description_white {
+  color: white;
+}
+
+.btn {
+  text-transform: capitalize;
+  color: var(--rag-red);
+  border: solid 2px var(--rag-red);
+  padding: 15px 50px;
+  background: none;
+  font-size: 18.14pt;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.btn-white {
+  color: white;
+  border-color: white;
+}
+
+.intro {
+  margin-bottom: 100px;
+}
+.intro_underline {
+  position: relative;
+}
+.intro_underline::after {
+  display: block;
+  content: "";
+  width: 130px;
+  height: 2px;
+  background: var(--rag-red);
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  margin-left: -65px;
+}
+.intro_underline-left::after {
+  left: 0;
+  margin-left: 0;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+.cards__card {
+  display: flex;
+  flex-direction: column;
+  max-width: 280px;
+  margin-bottom: 30px;
+  margin-right: 20px;
+}
+.cards__card-title {
+  font-size: 20pt;
+  color: var(--rag-black);
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.cards__card-description {
+  font-size: 14pt;
+}
+.cards__card img {
+  width: 41px;
+}
+.cards__card * {
+  margin-bottom: 20px;
+}
+
+.form input, .form textarea {
+  padding: 23px;
+  font-size: 14pt;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  max-width: 530px;
+  width: 100%;
+}
+
+.info {
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 70px;
+}
+.info__title {
+  font-weight: bold;
+}
+.info__description {
+  font-size: 12pt;
+}
+.info * {
+  margin-bottom: 20px;
+}
+
+.container {
+  max-width: 1320px;
+  margin: 100px auto;
+  width: 100%;
+}
+
+.header {
+  position: absolute;
+  width: 100%;
+  top: 0;
+}
+.header__container {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  background: var(--rag-black);
+}
+.header__ul {
+  display: flex;
+  text-transform: uppercase;
+}
+.header__ul a {
+  color: white;
+  text-decoration: none;
+  font-size: 14pt;
+  font-weight: bold;
+}
+.header__ul li:hover {
+  background: var(--rag-red);
+}
+
+.hero {
+  background: var(--hero-background);
+  padding-top: 200px;
+  padding-bottom: 100px;
+}
+.hero__container {
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+}
+
+.advantage__container {
+  display: grid;
+  grid-template-columns: 6fr 6fr;
+}
+.advantage__title {
+  color: var(--rag-black);
+}
+.advantage__offer {
+  padding-right: 16.6666666667%;
+}
+
+.products__intro {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 100px;
+}
+.products-content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+.products-content img {
+  width: 300px;
+}
+.products__ul {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.products__controls {
+  margin-bottom: 50px;
+  text-transform: uppercase;
+  font-size: 18pt;
+  font-weight: var(--semibold);
+  color: var(--rag-gray);
+}
+
+.team__intro {
+  max-width: 600px;
+}
+.team__slider {
+  display: grid;
+  grid-template-columns: 3fr 8fr;
+  gap: 8.3333333333%;
+}
+.team__slider .swiper-slide {
+  width: 320px;
+  height: 450px;
+}
+.team__controls {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.team__bullets ul {
+  display: flex;
+  justify-content: space-between;
+}
+.team__bullets li {
+  width: 200px;
+  height: 200px;
+}
+.team-position__ul {
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+  font-style: italic;
+  font-weight: var(--semibold);
+  font-size: 14pt;
+}
+
+.mail {
+  background-image: url("static/img/red_back.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 30px 0;
+  text-align: center;
+}
+.mail__title {
+  text-transform: none;
+}
+.mail__btn {
+  display: inline-block;
+  transform: translateY(3px);
+}
+.mail__input {
+  margin-right: 30px;
+}
+
+.contact__interact {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.contact__info {
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  right: min(-120px, (1320px - 100vw) / 2);
+}
+.contact__intro {
+  width: 50%;
+}
+.contact__form {
+  display: grid;
+  grid-template-areas: "Name Mail" "Text Text" "Send Send";
+  gap: 30px;
+}
+.contact__form input, .contact__form textarea {
+  min-width: auto;
+  width: auto;
+  background: var(--rag-white);
+}
+.contact__form textarea {
+  width: inherit;
+  resize: none;
+  max-width: none;
+}
+.contact__form input[name=name] {
+  grid-area: Name;
+}
+.contact__form input[name=mail] {
+  grid-area: Mail;
+}
+.contact__form textarea[name=text] {
+  grid-area: Text;
+}
+.contact__form .contact__submit {
+  grid-area: Send;
+  text-align: center;
+}
+.contact__info {
+  background: var(--rag-black);
+}
+
+.footer {
+  padding: 30px 0;
+  background: var(--rag-black);
+}
+.footer__copyright {
+  color: white;
+  margin: auto 0;
+}
+.footer__container {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.social {
+  display: flex;
+}
+.social__item {
+  display: flex;
+  width: 35px;
+  height: 35px;
+  align-items: center;
+  justify-content: center;
+  color: var(--rag-black);
+  background: white;
+  border-radius: 100%;
+}
+.social__item:not(:last-child) {
+  margin-right: 15px;
+}
+
+/*# sourceMappingURL=index.css.map */
