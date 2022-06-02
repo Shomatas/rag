@@ -2,15 +2,57 @@
   position: absolute
   width: 100%
   top: 0
+
+  &__burger
+    position: absolute
+    top: 30px
+    right: 30px
+    display: none
+
+    @media screen and (max-device-width: 768px)
+      display: block
+
   &__container
     margin: 0 auto
     display: flex
     justify-content: center
     background: var(--rag-black)
 
+    @media screen and (max-device-width: 768px)
+      background: white
+
+
+  &__nav
+    background: var(--rag-black)
+
+    &-close
+      display: none
+
+    @media screen and (max-device-width: 768px)
+      position: fixed
+      width: 100vw
+      left: -100%
+      transition: left 0.5s
+      height: 100vh
+      padding-top: 100px
+
+      &_active
+        left: 0
+
+      &-close
+        display: block
+        position: absolute
+        right: 30px
+        top: 30px
+
+
   &__ul
     display: flex
     text-transform: uppercase
+
+    @media screen and (max-device-width: 768px)
+      flex-direction: column
+
 
     a
       color: white

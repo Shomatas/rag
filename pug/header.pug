@@ -1,4 +1,7 @@
 header.header
   div.container.header__container
-    nav.nav
+    button.burger.header__burger <i class="fa-solid fa-bars"></i>
+    nav.nav.header__nav
+      button.nav-close.header__nav-close
+        <i class="fa-solid fa-arrow-left"></i>
       +links(link, "ul header__ul")
